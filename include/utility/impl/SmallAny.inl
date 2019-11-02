@@ -34,7 +34,7 @@ const Object* SmallAny::as() const {
 }
 
 template<typename Object>
-SmallAny::ObjectFunc SmallAny::MakeObjectFunc() {
+constexpr SmallAny::ObjectFunc SmallAny::MakeObjectFunc() {
   return [](SmallAny& any, const void* copyFrom) {
     ObjectData& objectData = any.objectData_;
 

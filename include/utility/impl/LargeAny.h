@@ -47,7 +47,7 @@ class LargeAny final {
     using ObjectFunc = void*(*)(const void* objectAsVoid, Operation operation);
 
     template<typename Object>
-    static ObjectFunc MakeObjectFunc();
+    static constexpr ObjectFunc MakeObjectFunc();
 
   private:
     void* ownedObject_;

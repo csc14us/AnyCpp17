@@ -31,7 +31,7 @@ const Object* LargeAny::as() const {
 }
 
 template<typename Object>
-LargeAny::ObjectFunc LargeAny::MakeObjectFunc() {
+constexpr LargeAny::ObjectFunc LargeAny::MakeObjectFunc() {
   return [](const void* objectAsVoid, const Operation operation) -> void* {
     if (operation == Operation::kCopy) {
       auto asObject = reinterpret_cast<const Object*>(objectAsVoid);

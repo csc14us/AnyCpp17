@@ -48,7 +48,7 @@ class SmallAny final {
     using ObjectFunc = void (*)(SmallAny& any, const void* copyFrom);
 
     template<typename Object>
-    static ObjectFunc MakeObjectFunc();
+    static constexpr ObjectFunc MakeObjectFunc();
 
   private:
     ObjectData objectData_;
